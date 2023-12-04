@@ -13,7 +13,7 @@ public class CountingSort {
                 max = a[i];
             }
         }
-        //  [2,5,3,0,-2,3,0,3]
+        //  [2,5,3,0,-2,3,0,3
         // zwischen -2 und 5 --> 8
         int range = max - min + 1;
 
@@ -56,7 +56,7 @@ public class CountingSort {
     }
 
     public static void main(String[] args){
-       int[] a = {0, 3, 2, 4, 3, 1};
+       int[] a = {0, 3, 2, 4, 3, -1,-2,5,-3};
        a = countingSort(a);
        for(int i = 0; i < a.length; i++){
            System.out.print(a[i]);

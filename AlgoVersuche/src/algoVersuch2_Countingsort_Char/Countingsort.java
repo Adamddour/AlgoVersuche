@@ -28,24 +28,24 @@ public class Countingsort {
         }
 
         // Aufsteigend
-        /*int j = 0;
+        int j = 0;
         for(int i = 0; i < range; i++){
             while (counts[i] > 0){
                 a[j++] = (char) (i + min);
                 counts[i]--;
             }
-        }*/
+        }
 
         
         // Absteigend
-        int j = 0;
+        /*int j = 0;
         for(int i = range-1; i >= 0; i--){
             while (counts[i] > 0){
                 a[j++] = (char) (i + min);
                 counts[i]--;
             }
         }
-         
+        */
     
         // Dann Ausgabe innerhalb der Main-Methode
         for(int i = 0; i < a.length; i++){

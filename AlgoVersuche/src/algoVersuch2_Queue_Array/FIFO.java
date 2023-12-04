@@ -19,7 +19,7 @@ public class FIFO implements FIFOQueue {
     @Override
     public FIFOQueue enqueue(char zeichen) {
         if(index == laenge-1){
-            throw new IllegalArgumentException("Array ist voll!");
+            throw new NoSuchElementException("Array ist voll!");
         }
         index++;
         queue[index] = zeichen;
@@ -32,6 +32,7 @@ public class FIFO implements FIFOQueue {
             throw new NoSuchElementException("Array ist leer!!");
         }
     
+        //shifting
         queue[0] = '\0';
         for(int i = 0; i <= index ; i++){
             queue[i] = queue[i+1];
@@ -77,7 +78,7 @@ public class FIFO implements FIFOQueue {
             // l1 -> ['1', '2', , , , , , ]
             System.out.println("Entferntes Element = " + l1.front()); // gibt '2' zurück
             l1.dequeue();
-            // l1 --> ['1', , , , , , , ]
+            // l1 --> ['1', , , , , , , ] 
         }
 
 
