@@ -66,17 +66,12 @@ public class ZeigerFIFO implements FIFOQueue {
             System.out.println("Hinzufügtes Element = " + element);
             l1.enqueue(element);
             // l1 -> ['1', '2', , , , , , ]
-            System.out.println("Entferntes Element = " + l1.front()); // gibt '2' zurück
+            System.out.println("Entferntes Element1 = " + l1.front()); // gibt '2' zurück
             l1.dequeue();
             // l1 --> ['1', , , , , , , ]
         }
 
-        for (int i = 0; !l1.isEmpty(); i++){
-            System.out.println(l1.front());
-            l1.dequeue(); //geht hier nicht Erkläung OBEN
-
-            // --> endlosse Schleife
-        }
+  
 
         // Lösung - Variante 1  -->
         while(!l1.isEmpty()){
