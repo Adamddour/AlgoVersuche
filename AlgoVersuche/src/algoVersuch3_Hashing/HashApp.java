@@ -3,47 +3,6 @@ package algoVersuch3_Hashing;
 import javax.swing.*;
 import java.util.NoSuchElementException;
 
-/*
-Generelles:
-Die Aufgabenstellung besteht aus einer Hauptaufgabe, in der Sie Hashtabellen
-betrachten sollen, in denen Verkettung verwendet wird. Als optionale Zusatzaufgabe
-können Sie (für Bonuspunkte) dann eine zweite, alternative Implementation der
-HashStruktur realisieren, die statt Verkettung offenes Hashing verwendet.
-
-Aufgabenbeschreibung: Hash-Datenstruktur mit Verkettungen
-
-    Gegeben sei die Applikation HashApp.java, die einzugebende Strings in eine Hashtabelle
-    gemäß einer definierten Hashfunktion einfügt.
-    // von Ahmad
-    // wo wird jedes eingefügtes Element stehen (in welche Index)#
-    // wer berechnet den Index --> die HashFunktion
-
-    1. Auf welche „Hash-Buckets“ werden zunächst die Strings jeweils abgebildet, und
-    wie lautet die ursprünglich hier im Programmcode verwendete Hashfunktion?
-
-    Dokumentieren sie die entsprechende Methode geeignet mit den Antworten auf die
-    obigen Fragen.
-
-    2. Schreiben Sie die 4 Funktionalitäten Element suchen, Element löschen, Liste eines
-    Buckets ausgeben, und listenLaengen mit den Eigenschaften:
-
-    a. Element suchen: sucht einen einzugebenden String in der Hashtabelle und gibt -
-    falls vorhanden- die Nummer des Korbes an.
-
-    b. Element löschen: löscht ein Datenelement aus der Hashtabelle sofern existent.
-
-    c. Liste eines Buckets ausgeben: Gibt alle Elemente der Datenstruktur aus, die
-    sich im Bucket mit dem angegebenen Index befinden.
-
-    d. listenLaengen: gibt die Länge der Listen aller Buckets aus.
-
-
-    3. Programmieren Sie eine eigene (sinnvollere) Hashfunktion.
-    Dokumentieren Sie die neue Methode, und äußern Sie sich zu Vorteilen gegenüber der bisherigen
-    Hashfuntion.
- */
-
-
 public class HashApp {
 	
 	/**

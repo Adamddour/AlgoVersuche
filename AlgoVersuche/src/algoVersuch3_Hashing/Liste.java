@@ -113,7 +113,7 @@ public class Liste {
         konvertierung von klein zu groß  buchstabe - 32
         konvertierung von groß zu klein  buchstabe + 32
 
-         */
+        */
         if(ersteBuchstabe >= 'a' && ersteBuchstabe <= 'z')
             ersteBuchstabe = (char) (ersteBuchstabe - 32);
 
