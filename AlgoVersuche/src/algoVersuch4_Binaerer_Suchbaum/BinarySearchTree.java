@@ -32,6 +32,9 @@ public class BinarySearchTree {
 
         return addNode(root, value);
     }
+    
+    
+    
     //1.1.b
     private boolean addNode(Treenode node, int value) {
         if (value < node.wert) {
@@ -53,10 +56,7 @@ public class BinarySearchTree {
         }
     }
 
-    //1.2
-    public String print() {
-        return print_structure(root);
-    }
+    
 
     //1.2
     private String print_structure(Treenode node) {
@@ -65,6 +65,10 @@ public class BinarySearchTree {
     + print_structure(node.secondChild) 
     + " } " : " null ";
         
+    }
+    //1.2
+    public String print() {
+        return print_structure(root);
     }
     
     /********Oder************/
