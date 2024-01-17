@@ -3,10 +3,11 @@ package algoVersuch4_Binaerer_Suchbaum;
 public class BinarySearchTree {
 	
 	private Treenode root;
+	
 
-    public BinarySearchTree(int value) {
+    /*public BinarySearchTree(int value) {
         root = new Treenode(value);
-    }
+    }*/
 
     //1.1.a
     public boolean find(int value) {
@@ -59,17 +60,47 @@ public class BinarySearchTree {
     
 
     //1.2
-    private String print_structure(Treenode node) {
+    /*private String print_structure(Treenode node) {
+    	
         return (node != null) ? node.wert + " { " 
     + print_structure(node.firstChild) 
     + print_structure(node.secondChild) 
     + " } " : " null ";
         
-    }
-    //1.2
+        
+    }*/
+    
     public String print() {
+	    return preOrder(root)+"\n"+inOrder(root)+"\n"+ postOrderTraversal(root);
+	}
+
+	private String preOrder(Treenode node) {
+	    return (node != null) ? node.wert 
+	    		+ " {" + preOrder(node.firstChild) 
+	    		+ preOrder(node.secondChild) + " } " : " null ";
+	}
+	
+
+	
+	
+	private String inOrder(Treenode node) {
+	    return "[" + inOrderTraversal(node) + "]";
+	}
+
+	private String inOrderTraversal(Treenode node) {
+	    return (node != null) ? inOrderTraversal(node.firstChild) 
+	    + " " + node.wert + " " + inOrderTraversal(node.secondChild) : "";
+	}
+	
+	private String postOrderTraversal(Treenode node) {
+	    return (node != null) ? inOrderTraversal(node.firstChild) 
+	     + " " + inOrderTraversal(node.secondChild)+ node.wert : "";
+	}
+    
+    //1.2
+    /*public String print() {
         return print_structure(root);
-    }
+    }*/
     
     /********Oder************/
     /*private String print_structure(Treenode node) {
@@ -77,10 +108,11 @@ public class BinarySearchTree {
 		if (node.firstChild != null) {
 			 print += print_structure(node.firstChild);
 		}
-		print += " " + node.wert;
+		
 		if (node.secondChild != null) {
 			 print += print_structure(node.secondChild);
 		}
+		print += " " + node.wert;
 		return print;
 	}*/
   //Ende_1.2
@@ -96,13 +128,13 @@ public class BinarySearchTree {
         return true;
     }
     
-    private Treenode deleteNode(Treenode node, int value) {
+   private Treenode deleteNode(Treenode node, int value) {
         if (node == null) {
             return null;
         }
 
         if (value < node.wert) {
-            node.firstChild = deleteNode(node.firstChild, value);
+            node.firstChild  = deleteNode(node.firstChild, value);
         } else if (value > node.wert) {
             node.secondChild = deleteNode(node.secondChild, value);
         } else {
@@ -119,6 +151,29 @@ public class BinarySearchTree {
         }
         return node;
     }
+    
+    
+   /* private Treenode deleteNode(Treenode node, int value) {
+        if (node == null) {
+            return null;
+        }
+
+        if (value < node.wert) {
+            node.firstChild = deleteNode(node.firstChild, value);
+        } else if (value > node.wert) {
+            node.secondChild = deleteNode(node.secondChild, value);
+        } else {
+            // Element gefunden, löschen
+            if (node.firstChild == null) {
+                return null;
+            } 
+            node.secondChild = deleteNode(node.firstChild, value);
+        }
+        return node;
+    }*/
+     
+    
+    
     /*********End_Remove*********/
     
     //gehoehrt zu End_Remove
