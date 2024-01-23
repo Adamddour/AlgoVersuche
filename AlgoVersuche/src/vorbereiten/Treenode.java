@@ -1,6 +1,5 @@
 package vorbereiten;
 
-
 public class Treenode {
 
 	Treenode firstChild;

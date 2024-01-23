@@ -60,7 +60,7 @@ public class BinarySearchTree {
     
 
     //1.2
-    /*private String print_structure(Treenode node) {
+    private String print_structure(Treenode node) {
     	
         return (node != null) ? node.wert + " { " 
     + print_structure(node.firstChild) 
@@ -68,21 +68,13 @@ public class BinarySearchTree {
     + " } " : " null ";
         
         
-    }*/
+    }
     
     public String print() {
-	    return preOrder(root)+"\n"+inOrder(root)+"\n"+ postOrderTraversal(root);
+	    return inOrder(root)+"\n";
 	}
 
-	private String preOrder(Treenode node) {
-	    return (node != null) ? node.wert 
-	    		+ " {" + preOrder(node.firstChild) 
-	    		+ preOrder(node.secondChild) + " } " : " null ";
-	}
-	
 
-	
-	
 	private String inOrder(Treenode node) {
 	    return "[" + inOrderTraversal(node) + "]";
 	}
@@ -92,10 +84,17 @@ public class BinarySearchTree {
 	    + " " + node.wert + " " + inOrderTraversal(node.secondChild) : "";
 	}
 	
+	/*
+	private String preOrder(Treenode node) {
+	    return (node != null) ? node.wert 
+	    		+ " {" + preOrder(node.firstChild) 
+	    		+ preOrder(node.secondChild) + " } " : " null ";
+	}
+	
 	private String postOrderTraversal(Treenode node) {
 	    return (node != null) ? inOrderTraversal(node.firstChild) 
 	     + " " + inOrderTraversal(node.secondChild)+ node.wert : "";
-	}
+	}*/
     
     //1.2
     /*public String print() {

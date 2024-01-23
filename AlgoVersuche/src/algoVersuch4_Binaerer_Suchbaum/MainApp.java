@@ -11,14 +11,13 @@ public class MainApp {
 		    for (int element : elements) {
 		        bst.add(element);
 		    }
-		    System.out.println("Baumstruktur: " + bst.print());
+		    
 		    
 		    //System.out.println("Baumstruktur: " + bst.find(70));
 		    
-		    int treeHeight = BinarySearchTree.height(bst.getRoot());
-		    
-		    boolean deleted7 = bst.delete(10);
-		    System.out.println("Baumstruktur: " + bst.print());
+	
+		  
+		    System.out.println("Baumstruktur:" + bst.print());
 	
 	}
 }
